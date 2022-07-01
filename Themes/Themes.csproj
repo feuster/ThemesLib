@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ErrorReport>none</ErrorReport>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Company>Feuster</Company>
+    <Description>Theme Library for fast access to a themed color list</Description>
+    <Copyright>© Alexander Feuster 2022</Copyright>
+    <PackageTags>Theme, Themes</PackageTags>
+    <PackageIcon>ThemesLib.png</PackageIcon>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>GPL-2.0-only</PackageLicenseExpression>
+    <Authors>Alexander Feuster</Authors>
+    <Product>$(AssemblyName)Lib</Product>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\ThemesLib.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>ThemesLib.ico</ApplicationIcon>
+    <Authors>Alexander Feuster</Authors>
+    <Description>Themes preview demonstrator for ThemesLib</Description>
+    <Copyright>© Alexander Feuster 2022</Copyright>
+    <PackageIcon>ThemesLib.png</PackageIcon>
+    <PackageLicenseExpression>GPL-2.0-only</PackageLicenseExpression>
+    <Company>Feuster</Company>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="ThemesLib.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\ThemesLib.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Themes\Themes.csproj" />
+  </ItemGroup>
+
+</Project>

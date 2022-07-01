@@ -10,7 +10,7 @@ ThemesLib is licensed under GPL-2.0-only.
 
 
 # ThemesPreview
-The ThemePreview demo is a handy tool for showing all available Themes
+The ThemePreview demo is a handy tool for showing all available Themes.
 
 ThemePreview is licensed under GPL-2.0-only.
 

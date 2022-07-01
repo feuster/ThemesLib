@@ -16,6 +16,7 @@
     <Authors>Alexander Feuster</Authors>
     <Product>$(AssemblyName)Lib</Product>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/feuster/ThemesLib</PackageProjectUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

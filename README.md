@@ -17,3 +17,4 @@ ThemePreview is licensed under GPL-2.0-only.
 © Alexander Feuster 2022
 
 ![ThemesPreview Screenshot](ThemesPreview.png)
+![ThemesPreview Screenshot](ThemesPreview2.png)

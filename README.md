@@ -7,3 +7,13 @@ Additionally gradient themes can be created.
 ThemesLib is licensed under GPL-2.0-only.
 
 © Alexander Feuster 2022
+
+
+# ThemesPreview
+The ThemePreview demo is a handy tool for showing all available Themes
+
+ThemePreview is licensed under GPL-2.0-only.
+
+© Alexander Feuster 2022
+
+![ThemesPreview Screenshot](ThemesPreview.png)

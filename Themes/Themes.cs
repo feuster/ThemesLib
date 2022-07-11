@@ -75,7 +75,7 @@ namespace Feuster
         /// List of all themes
         /// </summary>
         // make sure to build the colors in a theme starting from the lightest colors going up to the darkest color
-        public static Theme[] ThemeList = new Theme[128]{
+        public static Theme[] ThemeList = new Theme[133]{
             new Theme() {
                 Name = "Granite 1",
                 Id = 1,
@@ -1625,6 +1625,69 @@ namespace Feuster
                 DarkMode = true,
                 ColorCount = 8,
                 ColorList = GetThemeByGradient(Color.FromArgb(0xFC, 0xF6, 0xCF), Color.FromArgb(0xFF, 0x88, 0x6A), 8).ColorList
+            },
+            new Theme() {
+                Name = "Glassdoor 129",
+                Id = 129,
+                DarkMode = false,
+                ColorCount = 4,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xB8, 0xED, 0xFF),
+                    Color.FromArgb(0x64, 0xC1, 0xD1),
+                    Color.FromArgb(0x2E, 0xB1, 0xA1),
+                    Color.FromArgb(0x3D, 0x99, 0x8A)
+                }
+            },
+            new Theme() {
+                Name = "Traverse City 130",
+                Id = 130,
+                DarkMode = false,
+                ColorCount = 4,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xF7, 0xE6, 0xEA),
+                    Color.FromArgb(0xF8, 0xD4, 0x9A),
+                    Color.FromArgb(0x64, 0xC4, 0xC3),
+                    Color.FromArgb(0x50, 0x93, 0xB3)
+                }
+            },
+            new Theme() {
+                Name = "Blue 131",
+                Id = 131,
+                DarkMode = true,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xC1, 0xDC, 0xE5),
+                    Color.FromArgb(0x8A, 0xCD, 0xDD),
+                    Color.FromArgb(0x00, 0x9D, 0xC1),
+                    Color.FromArgb(0x00, 0x6C, 0xB5),
+                    Color.FromArgb(0x00, 0x40, 0x6B)
+                }
+            },
+            new Theme() {
+                Name = "Grey 132",
+                Id = 132,
+                DarkMode = true,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xF2, 0xF2, 0xF2),
+                    Color.FromArgb(0xA6, 0xA6, 0xA6),
+                    Color.FromArgb(0xD9, 0x79, 0x04),
+                    Color.FromArgb(0x47, 0x4A, 0x49),
+                    Color.FromArgb(0x0D, 0x0D, 0x0D)
+                }
+            },
+            new Theme() {
+                Name = "Mauve 133",
+                Id = 133,
+                DarkMode = false,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xB6, 0xDE, 0xF5),
+                    Color.FromArgb(0xAC, 0xD0, 0xEB),
+                    Color.FromArgb(0xE7, 0xC6, 0xE0),
+                    Color.FromArgb(0xD4, 0xBA, 0xD2),
+                    Color.FromArgb(0xB9, 0xB0, 0xD1)
+                }
             }
         };
         #endregion

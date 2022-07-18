@@ -75,7 +75,7 @@ namespace Feuster
         /// List of all themes
         /// </summary>
         // make sure to build the colors in a theme starting from the lightest colors going up to the darkest color
-        public static Theme[] ThemeList = new Theme[133]{
+        public static Theme[] ThemeList = new Theme[145]{
             new Theme() {
                 Name = "Granite 1",
                 Id = 1,
@@ -1687,6 +1687,124 @@ namespace Feuster
                     Color.FromArgb(0xE7, 0xC6, 0xE0),
                     Color.FromArgb(0xD4, 0xBA, 0xD2),
                     Color.FromArgb(0xB9, 0xB0, 0xD1)
+                }
+            },
+            new Theme() {
+                Name = "Multi 134",
+                Id = 134,
+                DarkMode = true,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xEC, 0xE6, 0xDB),
+                    Color.FromArgb(0xC7, 0xB9, 0xA2),
+                    Color.FromArgb(0x51, 0xBB, 0xE0),
+                    Color.FromArgb(0xAD, 0x1F, 0x4D),
+                    Color.FromArgb(0x0D, 0x29, 0x4A)
+                }
+            },
+            new Theme() {
+                Name = "Kermit 135",
+                Id = 135,
+                DarkMode = false,
+                ColorCount = 4,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xCD, 0xE4, 0xAC),
+                    Color.FromArgb(0x98, 0xDB, 0xAF),
+                    Color.FromArgb(0x78, 0xD2, 0xD3),
+                    Color.FromArgb(0x74, 0xBD, 0xE0)
+                }
+            },
+            new Theme() {
+                Name = "Fairy 136",
+                Id = 136,
+                DarkMode = true,
+                ColorCount = 4,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xFE, 0xFF, 0xF1),
+                    Color.FromArgb(0x45, 0xE3, 0xFF),
+                    Color.FromArgb(0x6F, 0x88, 0xFC),
+                    Color.FromArgb(0xA1, 0x62, 0xF7)
+                }
+            },
+            new Theme() {
+                Name = "Multi 137",
+                Id = 137,
+                DarkMode = true,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xFF, 0xCE, 0xCA),
+                    Color.FromArgb(0xEE, 0x44, 0x45),
+                    Color.FromArgb(0xFD, 0xC4, 0x01),
+                    Color.FromArgb(0x17, 0xA2, 0x94),
+                    Color.FromArgb(0x28, 0x3D, 0x9E)
+                }
+            },
+            new Theme() {
+                Name = "Blue 138",
+                Id = 138,
+                DarkMode = true,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xC1, 0xDC, 0xE5),
+                    Color.FromArgb(0x8A, 0xCD, 0xDD),
+                    Color.FromArgb(0x00, 0x9D, 0xC1),
+                    Color.FromArgb(0x00, 0x6C, 0xB5),
+                    Color.FromArgb(0x00, 0x40, 0x6B)
+                }
+            },
+            new Theme() {
+                Name = "Gradient 139",
+                Id = 139,
+                DarkMode = false,
+                ColorCount = 8,
+                ColorList = GetThemeByGradient(Color.FromArgb(0xFF, 0xAE, 0x8B), Color.FromArgb(0xDF, 0x5A, 0x72), 8).ColorList
+            },
+            new Theme() {
+                Name = "Gradient 140",
+                Id = 140,
+                DarkMode = false,
+                ColorCount = 8,
+                ColorList = GetThemeByGradient(Color.FromArgb(0xBD, 0xC3, 0xC7), Color.FromArgb(0x44, 0x54, 0x63), 8).ColorList
+            },
+            new Theme() {
+                Name = "Gradient 141",
+                Id = 141,
+                DarkMode = false,
+                ColorCount = 8,
+                ColorList = GetThemeByGradient(Color.FromArgb(0x40, 0xD8, 0xAB), Color.FromArgb(0x35, 0xA8, 0xE1), 8).ColorList
+            },
+            new Theme() {
+                Name = "Gradient 142",
+                Id = 142,
+                DarkMode = false,
+                ColorCount = 8,
+                ColorList = GetThemeByGradient(Color.FromArgb(0xAD, 0x8C, 0xEA), Color.FromArgb(0x50, 0xDF, 0xB2), 8).ColorList
+            },
+            new Theme() {
+                Name = "Gradient 143",
+                Id = 143,
+                DarkMode = true,
+                ColorCount = 8,
+                ColorList = GetThemeByGradient(Color.FromArgb(0x87, 0x8C, 0xF4), Color.FromArgb(0x59, 0x5F, 0xD1), 8).ColorList
+            },
+            new Theme() {
+                Name = "Gradient 144",
+                Id = 144,
+                DarkMode = false,
+                ColorCount = 7,
+                ColorList = GetThemeByGradient(Color.FromArgb(0xC7, 0xFE, 0xDB), Color.FromArgb(0xFB, 0xD6, 0x86), Color.FromArgb(0xF9, 0xAE, 0x82)).ColorList
+            },
+            new Theme() {
+                Name = "Green 145",
+                Id = 145,
+                DarkMode = true,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xF2, 0xF0, 0xEA),
+                    Color.FromArgb(0xCC, 0xD6, 0xC7),
+                    Color.FromArgb(0xA8, 0xB4, 0x98),
+                    Color.FromArgb(0x70, 0x8E, 0x6E),
+                    Color.FromArgb(0x3D, 0x59, 0x3c)
                 }
             }
         };

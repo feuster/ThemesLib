@@ -75,7 +75,7 @@ namespace Feuster
         /// List of all themes
         /// </summary>
         // make sure to build the colors in a theme starting from the lightest colors going up to the darkest color
-        public static Theme[] ThemeList = new Theme[145]{
+        public static Theme[] ThemeList = new Theme[150]{
             new Theme() {
                 Name = "Granite 1",
                 Id = 1,
@@ -1805,6 +1805,70 @@ namespace Feuster
                     Color.FromArgb(0xA8, 0xB4, 0x98),
                     Color.FromArgb(0x70, 0x8E, 0x6E),
                     Color.FromArgb(0x3D, 0x59, 0x3c)
+                }
+            },
+            new Theme() {
+                Name = "Grey 146",
+                Id = 146,
+                DarkMode = true,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xE9, 0xED, 0xF7),
+                    Color.FromArgb(0xC8, 0xD0, 0xDF),
+                    Color.FromArgb(0x99, 0xA8, 0xC0),
+                    Color.FromArgb(0x63, 0x7B, 0x97),
+                    Color.FromArgb(0x2B, 0x4F, 0x6E)
+                }
+            },
+            new Theme() {
+                Name = "Multi 147",
+                Id = 147,
+                DarkMode = true,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xFE, 0xE3, 0xA2),
+                    Color.FromArgb(0xF3, 0xC3, 0x01),
+                    Color.FromArgb(0xAD, 0xCA, 0xCB),
+                    Color.FromArgb(0x87, 0xC1, 0x59),
+                    Color.FromArgb(0x05, 0x82, 0x40)
+                }
+            },
+            new Theme() {
+                Name = "Blue 148",
+                Id = 148,
+                DarkMode = true,
+                ColorCount = 4,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xE2, 0xF3, 0xF5),
+                    Color.FromArgb(0x22, 0xD1, 0xEE),
+                    Color.FromArgb(0x3D, 0x5A, 0xF1),
+                    Color.FromArgb(0x0E, 0x15, 0x3D)
+                }
+            },
+            new Theme() {
+                Name = "Red 149",
+                Id = 149,
+                DarkMode = false,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xF9, 0xE2, 0xE2),
+                    Color.FromArgb(0xD9, 0x99, 0xAE),
+                    Color.FromArgb(0xC6, 0x23, 0x23),
+                    Color.FromArgb(0xA1, 0x0D, 0x56),
+                    Color.FromArgb(0x23, 0x1E, 0x4D)
+                }
+            },
+            new Theme() {
+                Name = "Neon 150",
+                Id = 150,
+                DarkMode = true,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xFF, 0xFF, 0x00),
+                    Color.FromArgb(0xBF, 0xFF, 0x01),
+                    Color.FromArgb(0xFE, 0x00, 0x96),
+                    Color.FromArgb(0xFF, 0x52, 0x00),
+                    Color.FromArgb(0x04, 0x91, 0xFF)
                 }
             }
         };

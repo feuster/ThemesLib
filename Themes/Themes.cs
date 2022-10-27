@@ -75,7 +75,7 @@ namespace Feuster
         /// List of all themes
         /// </summary>
         // make sure to build the colors in a theme starting from the lightest colors going up to the darkest color
-        public static Theme[] ThemeList = new Theme[150]{
+        public static Theme[] ThemeList = new Theme[155]{
             new Theme() {
                 Name = "Granite 1",
                 Id = 1,
@@ -1870,6 +1870,59 @@ namespace Feuster
                     Color.FromArgb(0xFF, 0x52, 0x00),
                     Color.FromArgb(0x04, 0x91, 0xFF)
                 }
+            },
+            new Theme() {
+                Name = "Blue 151",
+                Id = 151,
+                DarkMode = false,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xE6, 0xE6, 0xE4),
+                    Color.FromArgb(0xCB, 0xCB, 0xCB),
+                    Color.FromArgb(0x40, 0x8F, 0xCE),
+                    Color.FromArgb(0x2F, 0x74, 0xC8),
+                    Color.FromArgb(0x21, 0x69, 0xA3)
+                }
+            },
+            new Theme() {
+                Name = "Gradient 152",
+                Id = 152,
+                DarkMode = false,
+                ColorCount = 7,
+                ColorList = GetThemeByGradient(Color.FromArgb(0xBB, 0xD2, 0xC5), Color.FromArgb(0x53, 0x69, 0x76), Color.FromArgb(0x29, 0x2E, 0x49)).ColorList
+            },
+            new Theme() {
+                Name = "Multi 153",
+                Id = 153,
+                DarkMode = false,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xE5, 0xE5, 0xE5),
+                    Color.FromArgb(0xFC, 0xD0, 0x37),
+                    Color.FromArgb(0x4B, 0xC4, 0xF1),
+                    Color.FromArgb(0x00, 0x8E, 0xC5),
+                    Color.FromArgb(0x00, 0x39, 0x63)
+               }
+            },
+            new Theme() {
+                Name = "Gradient 154",
+                Id = 154,
+                DarkMode = false,
+                ColorCount = 8,
+                ColorList = GetThemeByGradient(Color.FromArgb(0xB7, 0x21, 0xFF), Color.FromArgb(0x21, 0xD4, 0xFD), 8).ColorList
+            },
+            new Theme() {
+                Name = "Purple 155",
+                Id = 155,
+                DarkMode = false,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xFF, 0xEC, 0xEF),
+                    Color.FromArgb(0xFF, 0xA6, 0xA6),
+                    Color.FromArgb(0xFF, 0x4F, 0x89),
+                    Color.FromArgb(0xCA, 0x00, 0x68),
+                    Color.FromArgb(0x7C, 0x21, 0x76)
+               }
             }
         };
         #endregion

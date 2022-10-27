@@ -24,6 +24,8 @@
     <PackageId>$(AssemblyName)Lib</PackageId>
     <AssemblyName>$(MSBuildProjectName)Lib</AssemblyName>
     <SignAssembly>False</SignAssembly>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <FileVersion>1.0.0.1</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

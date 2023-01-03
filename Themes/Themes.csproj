@@ -8,7 +8,7 @@
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Company>Feuster</Company>
     <Description>Theme Library for fast access to a themed color list</Description>
-    <Copyright>© Alexander Feuster 2022</Copyright>
+    <Copyright>© Alexander Feuster 2023</Copyright>
     <PackageTags>Theme, Themes, Color, Colorscheme, Gradient</PackageTags>
     <PackageIcon>ThemesLib.png</PackageIcon>
     <RepositoryType>git</RepositoryType>
@@ -24,8 +24,8 @@
     <PackageId>$(AssemblyName)Lib</PackageId>
     <AssemblyName>$(MSBuildProjectName)Lib</AssemblyName>
     <SignAssembly>False</SignAssembly>
-    <AssemblyVersion>1.0.0.1</AssemblyVersion>
-    <FileVersion>1.0.0.1</FileVersion>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <FileVersion>1.0.0.2</FileVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

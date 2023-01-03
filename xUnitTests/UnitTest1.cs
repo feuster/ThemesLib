@@ -16,6 +16,7 @@ namespace xUnitTests
         public void GetThemeByName()
         {
             Assert.Equal("Granite 1", Themes.GetThemeByName("Granite 1").Name);
+            Assert.Equal("Granite 1", Themes.GetThemeByName("").Name);
             Assert.Equal("Blue Red Gradient 100", Themes.GetThemeByName("Blue Red Gradient 100").Name);
             Assert.Equal(1, Themes.GetThemeByName("Granite 1").Id);
             Assert.Equal(100, Themes.GetThemeByName("Blue Red Gradient 100").Id);
@@ -44,7 +45,7 @@ namespace xUnitTests
             var ex = Assert.Throws<Exception>(() => Themes.GetThemeColor("", 0));
             Assert.Equal("Exception: Theme is null", ex.Message);
 #else
-            Assert.Equal(Color.FromArgb(0xFF, 0xFF, 0xFF, 0xFF), Themes.GetThemeColor("", 1));
+            Assert.Equal(Color.FromArgb(0xFF, 0xFF, 0xFF, 0xFF), Themes.GetThemeColor("", 0));
 #endif
         }
 

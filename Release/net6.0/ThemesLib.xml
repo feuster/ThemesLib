@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ThemesLib</name>
+    </assembly>
+    <members>
+        <member name="F:Feuster.Themes.Theme._Name">
+            <summary>
+            Theme Name consisting of the Name combined with the internal Id
+            </summary>
+        </member>
+        <member name="P:Feuster.Themes.Theme.Id">
+            <summary>
+            Theme internal Id
+            </summary>
+        </member>
+        <member name="F:Feuster.Themes.Theme._DarkMode">
+            <summary>
+            Switch whether to use the regular color scheme or darkmode color scheme (inverted regular scheme)
+            </summary>
+        </member>
+        <member name="P:Feuster.Themes.Theme.ColorCount">
+            <summary>
+            Available colors in the actual theme
+            </summary>
+        </member>
+        <member name="P:Feuster.Themes.Theme.ColorList">
+            <summary>
+            List of colors for the regular color scheme
+            </summary>           
+        </member>
+        <member name="M:Feuster.Themes.Theme.GetColor(System.Int32)">
+            <summary>
+            Get a single color by index depending on the actual DarkMode setting
+            </summary>
+            <param name="Index"></param>
+            <returns>Color</returns>
+        </member>
+        <member name="F:Feuster.Themes.ThemeList">
+            <summary>
+            List of all themes
+            </summary>
+        </member>
+        <member name="M:Feuster.Themes.GetThemeById(System.Int32)">
+            <summary>
+            Get a Theme by its Id
+            </summary>
+            <param name="Id">Theme Id Number</param>
+            <returns>Theme or on error first default Theme</returns>
+        </member>
+        <member name="M:Feuster.Themes.GetThemeByName(System.String)">
+            <summary>
+             Get a Theme by its Name
+            </summary>
+            <param name="Name">Theme Name String</param>
+            <returns>Theme or on error first default Theme</returns>
+        </member>
+        <member name="M:Feuster.Themes.GetThemeColor(Feuster.Themes.Theme,System.Int32,System.Boolean)">
+            <summary>
+            Get a single Color from a Theme by its Name, DarkMode setting and the index in the color list
+            </summary>
+            <param name="theme"></param>
+            <param name="ColorIndex"></param>
+            <param name="DarkMode"></param>
+            <returns>Color value</returns>
+            <exception cref="T:System.Exception">Theme is null</exception>
+        </member>
+        <member name="M:Feuster.Themes.GetThemeColor(System.String,System.Int32,System.Boolean)">
+            <summary>
+            Get a single Color from a Theme by its Name, DarkMode setting and the index in the color list
+            </summary>
+            <param name="ThemeName">Theme Name String</param>
+            <param name="ColorIndex">Color Index starting at 0</param>
+            <param name="DarkMode">DarkMode setting</param>
+            <returns>Requested Color value or in error case black/white depending on DarkMode setting</returns>
+            <exception cref="T:System.Exception">Theme is null</exception>
+        </member>
+        <member name="M:Feuster.Themes.GetThemeColor(System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Get a single Color from a Theme by its Name, DarkMode setting and the index in the color list
+            </summary>
+            <param name="ThemeId"></param>
+            <param name="ColorIndex">Color Index starting at 0</param>
+            <param name="DarkMode">DarkMode setting</param>
+            <returns>Requested Color value or in error case black/white depending on DarkMode setting</returns>
+            <exception cref="T:System.Exception">Theme is null</exception>
+        </member>
+        <member name="M:Feuster.Themes.GetThemeColor(System.Int32,System.Int32)">
+            <summary>
+            Get a single Color from a Theme by its Id and the index in the color list
+            using the active DarkMode setting
+            </summary>
+            <param name="ThemeId"></param>
+            <param name="ColorIndex">Color Index starting at 0</param>
+            <returns>Requested Color value or in error case black/white depending on DarkMode setting</returns>
+        </member>
+        <member name="M:Feuster.Themes.GetThemeColor(System.String,System.Int32)">
+            <summary>
+            Get a single Color from a Theme by its Name and the index in the color list
+            using the active DarkMode setting
+            </summary>
+            <param name="ThemeName">Theme Name String</param>
+            <param name="ColorIndex">Color Index starting at 0</param>
+            <returns>Requested Color value or in error case black/white depending on DarkMode setting</returns>
+        </member>
+        <member name="M:Feuster.Themes.GetThemeColorCount(System.String)">
+            <summary>
+            Get the Color count from a Theme by its Name
+            </summary>
+            <param name="ThemeName">Theme Name String</param>
+            <returns>Number of available Colors</returns>
+            <exception cref="T:System.Exception">Theme is null</exception>
+        </member>
+        <member name="M:Feuster.Themes.GetThemeColorCount(System.Int32)">
+            <summary>
+            Get the Color count from a Theme by its Id
+            </summary>
+            <param name="ThemeId">Theme Id</param>
+            <returns>Number of available Colors</returns>
+            <exception cref="T:System.Exception">Theme is null</exception>
+        </member>
+        <member name="M:Feuster.Themes.GetThemeNames(System.Boolean,System.Boolean)">
+            <summary>
+            List all available Themes by Name
+            </summary>
+            <param name="SortAtoZ">list alphabetically sorted</param>
+            <param name="ColorCount">include color count of the theme</param>
+            <returns>String list with Theme names</returns>
+        </member>
+        <member name="M:Feuster.Themes.GetThemeNamesByColorCount(System.Int32,System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            List all available Themes by Name and by their Color Count
+            </summary>
+            <param name="ColorCount">Color count which is needed to show the theme in the list</param>
+            <param name="ColorCountAsMin">List also themes which have more Colors than the given count</param>
+            <param name="SortAtoZ">list alphabetically sorted</param>
+            <param name="ColorCount">include color count of the theme</param>
+            <returns>String list with Theme names</returns>
+        </member>
+        <member name="M:Feuster.Themes.GetThemeByGradient(System.Drawing.Color,System.Drawing.Color,System.Int32,System.String)">
+            <summary>
+            Generate a theme by 2 gradient colors
+            </summary>
+            <param name="Start">Start Color of Gradient</param>
+            <param name="End">End Color of Gradient</param>
+            <param name="ColorCount">Color count between 2 to 8 colors</param>
+            <param name="Name">optional Name for the generated theme</param>
+            <returns>Theme</returns>
+        </member>
+        <member name="M:Feuster.Themes.GetThemeByGradient(System.Drawing.Color,System.Drawing.Color,System.Drawing.Color,System.String)">
+            <summary>
+            Generate a theme by 3 gradient colors
+            </summary>
+            <param name="Start">Start Color of Gradient</param>
+            <param name="Center">Center Color of Gradient</param>
+            <param name="End">End Color of Gradient</param>
+            <param name="Name">optional Name for the generated theme</param>
+            <returns>Theme</returns>
+        </member>
+    </members>
+</doc>

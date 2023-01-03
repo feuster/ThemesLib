@@ -75,7 +75,7 @@ namespace Feuster
         /// List of all themes
         /// </summary>
         // make sure to build the colors in a theme starting from the lightest colors going up to the darkest color
-        public static Theme[] ThemeList = new Theme[155]{
+        public static Theme[] ThemeList = new Theme[160]{
             new Theme() {
                 Name = "Granite 1",
                 Id = 1,
@@ -1923,6 +1923,70 @@ namespace Feuster
                     Color.FromArgb(0xCA, 0x00, 0x68),
                     Color.FromArgb(0x7C, 0x21, 0x76)
                }
+            },
+            new Theme() {
+                Name = "Blue 156",
+                Id = 156,
+                DarkMode = false,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xEC, 0xF4, 0xF4),
+                    Color.FromArgb(0xDE, 0xC4, 0xE2),
+                    Color.FromArgb(0x54, 0xB4, 0xEA),
+                    Color.FromArgb(0x03, 0x63, 0xBB),
+                    Color.FromArgb(0x02, 0x37, 0x85)
+               }
+            },
+            new Theme() {
+                Name = "Multi 157",
+                Id = 157,
+                DarkMode = false,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xF2, 0xF2, 0xF2),
+                    Color.FromArgb(0x76, 0xD4, 0x67),
+                    Color.FromArgb(0xD4, 0xCA, 0xFF),
+                    Color.FromArgb(0x7D, 0x5D, 0xFE),
+                    Color.FromArgb(0x23, 0x38, 0x83)
+               }
+            },
+            new Theme() {
+                Name = "Red Velvet 158",
+                Id = 158,
+                DarkMode = true,
+                ColorCount = 4,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xFF, 0xD6, 0xD6),
+                    Color.FromArgb(0xFF, 0x37, 0x37),
+                    Color.FromArgb(0xBD, 0x0A, 0x0A),
+                    Color.FromArgb(0x65, 0x04, 0x04)
+               }
+            },
+            new Theme() {
+                Name = "Green 159",
+                Id = 159,
+                DarkMode = true,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xE2, 0xF8, 0xF0),
+                    Color.FromArgb(0xD1, 0xF0, 0x7A),
+                    Color.FromArgb(0x50, 0xDE, 0xBC),
+                    Color.FromArgb(0x03, 0xBB, 0xB0),
+                    Color.FromArgb(0x02, 0x85, 0x85)
+               }
+            },
+            new Theme() {
+                Name = "Multi 160",
+                Id = 160,
+                DarkMode = true,
+                ColorCount = 5,
+                ColorList = new Color[] {
+                    Color.FromArgb(0xFF, 0xFF, 0xFF),
+                    Color.FromArgb(0xE6, 0xFC, 0x5F),
+                    Color.FromArgb(0xE7, 0xD3, 0xFF),
+                    Color.FromArgb(0xB8, 0x80, 0xFF),
+                    Color.FromArgb(0x1A, 0x1B, 0x15)
+               }
             }
         };
         #endregion
@@ -2091,7 +2155,7 @@ namespace Feuster
                 return GetThemeColor(1, 0, false);
 #endif
             else
-                return GetThemeColor(ThemeName, ColorIndex, theme.DarkMode);
+                return GetThemeColor(theme.Id, ColorIndex, theme.DarkMode);
         }
 
         /// <summary>

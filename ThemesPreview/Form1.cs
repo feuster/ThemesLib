@@ -1,3 +1,7 @@
+using System.Globalization;
+using System.Linq;
+using System.Windows;
+
 namespace ThemesPreview
 {
     public partial class Form1 : Form
@@ -5,7 +9,7 @@ namespace ThemesPreview
         public Form1()
         {
             InitializeComponent();
-            trackBar1.Maximum=Feuster.Themes.ThemeList.Length-1;
+            trackBar1.Maximum = Feuster.Themes.ThemeList.Length - 1;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -201,7 +205,7 @@ namespace ThemesPreview
             //Get actual selected theme
             bool dm = false;
             Feuster.Themes.Theme theme = Feuster.Themes.ThemeList[trackBar1.Value];
-            
+
             if (theme == null)
                 return;
             dm = theme.DarkMode;
@@ -233,7 +237,7 @@ namespace ThemesPreview
                         textBox1.ForeColor = theme.GetColor(3);
                     }
                     else
-                    { 
+                    {
                         textBox1.BackColor = theme.GetColor(0);
                         textBox1.ForeColor = theme.GetColor(3);
                     }
@@ -337,7 +341,7 @@ namespace ThemesPreview
                                 RTB.ForeColor = theme.GetColor(i);
                                 theme.DarkMode = !theme.DarkMode;
                             }
-                            RTB.Text = theme.Name + Environment.NewLine + Environment.NewLine + "Color Index " + (i+1).ToString() + " of " + Feuster.Themes.GetThemeColorCount(theme.Name);
+                            RTB.Text = theme.Name + Environment.NewLine + Environment.NewLine + "Color Index " + (i + 1).ToString() + " of " + Feuster.Themes.GetThemeColorCount(theme.Name);
                             RTB.Visible = true;
                         }
                     }
@@ -349,6 +353,83 @@ namespace ThemesPreview
         {
             textBox1.Text = string.Join(Environment.NewLine, Feuster.Themes.GetThemeNamesByColorCount(1, true));
             trackBar1_ValueChanged(sender, e);
+            InitializeListView();
+            label4.Text = "All Colors Selector" + Environment.NewLine;
+            comboBox1.SelectedIndex = 0;
+        }
+
+        private void InitializeListView()
+        {
+            List<Color> colors = new();
+            foreach (var theme in Feuster.Themes.ThemeList)
+            {
+                if (theme != null)
+                {
+                    foreach (var color in theme.ColorList)
+                    {
+                        colors.Add(color);
+                    }
+                }
+            }
+            colors = colors
+                .Distinct()
+                .OrderBy(c => c.GetHue())
+                .ThenBy(c => c.GetSaturation())
+                .ThenBy(c => c.GetBrightness())
+                .ToList();
+            listView1.BeginUpdate();
+            foreach (var color in colors)
+            {
+                ListViewItem item = new();
+                item.Text = $"   {color.R:X2}{color.G:X2}{color.B:X2}   ";
+                item.BackColor = color;
+                if (color.GetBrightness() <= 0.5)
+                    item.ForeColor = Color.White;
+                else
+                    item.ForeColor = Color.Black;
+                listView1.Items.Add(item);
+            }
+            listView1.EndUpdate();
+        }
+
+        //select color and copy into clipboard
+        private void listView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+                return;
+            var item = listView1.SelectedItems[0];
+            string selectedcolor = item.Text.Trim();
+            label4.Text = "All Colors Selector" + Environment.NewLine + selectedcolor;
+
+            //change color string into selected format
+            string cliptext = string.Empty;
+            switch (comboBox1.SelectedIndex)
+            {
+                default:
+                    cliptext = "#" + selectedcolor;
+                    break;
+                case 1:
+                    cliptext = selectedcolor;
+                    break;
+                case 2:
+                    cliptext = int.Parse($"{selectedcolor.Substring(0, 2)}", NumberStyles.HexNumber).ToString() + " ";
+                    cliptext += int.Parse($"{selectedcolor.Substring(2, 2)}", NumberStyles.HexNumber).ToString() + " ";
+                    cliptext += int.Parse($"{selectedcolor.Substring(4, 2)}", NumberStyles.HexNumber).ToString();
+                    break;
+                case 3:
+                    cliptext = $"FF{selectedcolor}";
+                    break;
+            }
+
+            //copy color into clipboard
+            if (cliptext != string.Empty)
+                Clipboard.SetData(DataFormats.Text, (Object)cliptext.Trim());
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //clear clipboard color due to format change
+            Clipboard.Clear();
         }
     }
 }
